@@ -34,15 +34,15 @@ exports.textMessage = (from, message) => {
 }
 
 /* This is to send the text with header, body, footer and buttons.
-   message is an object with header, body and footer.
-   {
-        header: "message inside header",
-        body: "message inside body",
-        footer: "message inside footer"
-   }
-   buttons is an array of strings, limited to 3 buttons, according to limitations of this kind o interaction.
-
-   The i parameter is to keep track of the state of the users interactions.
+ * message is an object with header, body and footer.
+ * {
+ *      header: "message inside header",
+ *      body: "message inside body",
+ *      footer: "message inside footer"
+ * }
+ * buttons is an array of strings, limited to 3 buttons, according to limitations of this kind o interaction.
+ *
+ * The i parameter is to keep track of the state of the users interactions.
 */
 exports.fullMessage = (from, message, buttons, i = 0) => {
     let body = {
@@ -88,14 +88,14 @@ exports.fullMessage = (from, message, buttons, i = 0) => {
 }
 
 /*
-    This is to send the text with header, body and buttons. Usualy footer is not used, so it is not included in this function.
-    message is an object with header and body or just a message that have buttons, in that case this parameter receives a String.
-    {
-        header: "message inside header",
-        body: "message inside body"
-    }
-
-    The i parameter is to keep track of the state of the users interactions.
+ *  This is to send the text with header, body and buttons. Usualy footer is not used, so it is not included in this function.
+ *  message is an object with header and body or just a message that have buttons, in that case this parameter receives a String.
+ *  {
+ *      header: "message inside header",
+ *      body: "message inside body"
+ *  }
+ *
+ *  The i parameter is to keep track of the state of the users interactions.
 */
 exports.interactiveMessage = (from, message, buttons, i = 0) => {
     if (message instanceof Object) {
@@ -172,11 +172,11 @@ exports.interactiveMessage = (from, message, buttons, i = 0) => {
 }
 
 /*
-    This is to send an interactive list message, the buttons show up like a dropdown.
-    message is a String with the message that will be shown.
-    buttons is an array of strings, limited to 20 buttons, according to limitations of this kind o interaction.
-    name is a String that will be shown in the dropdown button.
-    i is to keep track of the state of the users interactions.
+ *  This is to send an interactive list message, the buttons show up like a dropdown.
+ *  message is a String with the message that will be shown.
+ *  buttons is an array of strings, limited to 20 buttons, according to limitations of this kind o interaction.
+ *  name is a String that will be shown in the dropdown button.
+ *  i is to keep track of the state of the users interactions.
 */
 exports.interactiveListMessage = (from, message, buttons, name, i = 0) => {
 
@@ -218,7 +218,7 @@ exports.interactiveListMessage = (from, message, buttons, name, i = 0) => {
 }
 
 /*
-    This is to send a media message, the image is sent as a URL.
+ *  This is to send a media message, the image is sent as a URL.
 */
 exports.mediaMessage = (from, img) => {
     let body = {
